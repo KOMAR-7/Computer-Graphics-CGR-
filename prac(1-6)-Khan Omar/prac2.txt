@@ -1,0 +1,38 @@
+Practical 2: DDA Line
+-------------------------
+DDA- digital differential analyzer (DDA).
+     Used for rasterization of lines, rectangles and polygon.
+
+Rasteriation:convert vextor image into raster image(in pixels).
+
+Equations:
+Xi=Xi-1 + 1,
+Yi=Yi-1 + 1.
+
+Procedure:
+1.X1!=X2, Y1!=Y2
+2.cal. dx=x2-x1 and dy=y2-y1.
+3.if(dx>=dy){
+	step=dx
+	}
+  else{
+	step=dy
+	}
+4.Xin=dx/step & Yin=dy/step.
+5.x=x1+0.5 & y=y1+0.5.
+6.for(k=0;k<step;k++){
+	X=X+Xin
+	Y=Y+YiN
+	putpxel(x,y)
+	}
+
+Slope intercept of line:y = mx + b (where m and b are real numbers).
+
+Advantage & disadvantage of DDA.
+Advantage:
+-Simplest algo., does not require special skills.
+-Faster method for calculating pixel position.
+Disadvantage:
+-The algorithm is orientation dependent. Hence end point accuracy is poor.
+-Rounding-off in DDA is time consuming.
+			By-Khan Omar

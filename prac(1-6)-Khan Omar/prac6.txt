@@ -1,0 +1,81 @@
+Practical-6:Polygon using boundary fill algo.
+---------------------------------------------------
+Boundary-fill Algo:
+Boundary-fill picks a point inside inside an object that is a seed point,
+and starts to fill until it hits the boundary.
+It can be done using 4-connected(pixel) and 8-connected(pixel) approach.
+
+4-connected boundary fill:
+void boundary_fill(int x, int y, int fill_color,int boundary_color)
+{
+    if(getpixel(x, y) != boundary_color &&
+       getpixel(x, y) != fill_color)
+    {
+        putpixel(x, y, fill_color);
+        boundary_fill(x + 1, y, fill_color, boundary_color);
+        boundary_fill(x, y + 1, fill_color, boundary_color);
+        boundary_fill(x - 1, y, fill_color, boundary_color);
+        boundary_fill(x, y - 1, fill_color, boundary_color);
+    }
+}
+
+8-connected boundary fill:
+void boundaryFill8(int x, int y, int fill_color,int boundary_color)
+{
+    if(getpixel(x, y) != boundary_color &&
+       getpixel(x, y) != fill_color)
+    {
+        putpixel(x, y, fill_color);
+        boundaryFill8(x + 1, y, fill_color, boundary_color);
+        boundaryFill8(x, y + 1, fill_color, boundary_color);
+        boundaryFill8(x - 1, y, fill_color, boundary_color);
+        boundaryFill8(x, y - 1, fill_color, boundary_color);
+        boundaryFill8(x - 1, y - 1, fill_color, boundary_color);
+        boundaryFill8(x - 1, y + 1, fill_color, boundary_color);
+        boundaryFill8(x + 1, y - 1, fill_color, boundary_color);
+        boundaryFill8(x + 1, y + 1, fill_color, boundary_color);
+    }
+}
+
+/*gd=DETECT:
+It tells the compiler that what graphics driver to use or to automatically detect the drive.*/
+ 
+Procedure:
+1-Initialize the value of seed point seedx,seedy,fcolor and dcolor
+2-define the the boundary values of the polygon.
+3-check if the current seed point is of default color, repeat below step till boundary pixel reached.
+4-change the default color with the fill color.
+5-recursively follow the procedure with four neighborhood point
+6-Exit
+
+//recursive-involving recursive function
+
+Flood fill vs boundary fill
+//let's Fight
+
+Flood Fill
+1-It can process the image containing more than one boundary colours.
+2-It requires huge amount of memory.
+3-Flood-fill algorithm is comparatively slower than the Boundary-fill algorithm.
+
+Boundary Fill
+1-It can only process the image containing single boundary colour.
+2-Memory consumption is relatively low in Boundary-fill algorithm.
+3-Boundary-fill algorithm is faster than the Flood-fill algorithm.
+
+4connected Vs 8connected
+4connected:
+In this technique 4-connected pixels are used as shown in the figure. 
+We are putting the pixels above, below, to the right, and to the left side of the current pixels and 
+this process will continue until we find a boundary with different color.
+Drawback:
+For some object the regions is partially filled here 4connected cannot be used.
+
+8connected:
+In this technique 8-connected pixels are used as shown in the figure. We are putting pixels above, below, right and left side of the current pixels,
+as we were doing in 4-connected technique.
+In addition to this, we are also putting pixels in diagonals so that entire area of the current pixel is covered. 
+This process will continue until we find a boundary with different color.
+
+
+			By-Khan Omar

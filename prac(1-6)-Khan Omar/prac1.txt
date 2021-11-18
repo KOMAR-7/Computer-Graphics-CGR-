@@ -1,0 +1,38 @@
+Practical 1:
+-------------------------------
+#include<graphics> --> header file for graphics program.
+
+-void initgrapgh(int *graphdriver,int grapgh mode,char pathtodriver) -->used to change from text mode to graphic mode.
+		//above mentioned inside brackets are parameters.
+
+-detectgraph() --> used to find out graphics driver and graphics mode.
+
+-void closegraph() --> this function is used to close the graphic mode,
+		       it deallocates the memory allocated by graphics system and restores screen in textmode.
+-putpixel(int x, int y,color) --> function used to draw pixel at given location(x,y).
+
+-line(int x1, int y1,int x2,int y2) --> draw a line from starting point(x1,y1) to end point(x2,y2).
+
+-circle(int x,int y,int radius) -->draw circle with center(x,y) to the radius.
+
+-rectangle(int left,int top,int right,int bottom) --> draw rectangle.co-ordinates of left-top and bottom right required.
+
+-ellipse(int x,int y,start angle,end angle,int xradius,int yradius) --> draw ellipse with center(x,y).
+					   //radius of x,radius of y
+
+-outtextxy(int x,int y,"text") --> used to insert text at gien position(x,y).
+
+Graphic driver: the software that allow your operating system and programs to use your computer's graphics hardware.
+Graphic mode:Graphics mode is a computer display mode that generates image using pixels.
+
+Application of CGR.:
+1.Computer Art.
+2.Visualisation.
+3.Image Processing.
+4.Presentation Graphics.
+
+Raster Scan Graphics:
+The rectangular pattern of image capture and reconstruction in television.
+Line:
+A single point that continues for a distance
+				By-Khan Omar

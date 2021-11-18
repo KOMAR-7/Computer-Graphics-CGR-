@@ -1,0 +1,45 @@
+Practical 5: Fill Polygon
+-----------------------------
+-Polygon is chain of connected line segments.
+-Floodfil also known as seed fill,
+ determines the area connected to a given node in a multi-dimensional array.
+ suitable for filling multiple boundary.
+ 
+-In flood fill we start with some seed and examine the neighbouring pixel,
+ however pixel are checked and replaced with a new color that does not matches with boundary color.
+ It can be done using 4 connected or 8 connected region method.
+
+Procedure:
+Flood_fill(node,target_color,replacement_color):
+1-If(target_color==replacement_color){return}
+2-If(node_color!=replacement_color){return}
+3-//set node_color=replacement_color
+4-Perform Flood_fill(one step to south of node,target_color,replacement_color)
+  Perform Flood_fill(one step to north of node,target_color,replacement_color)
+  Perform Flood_fill(one step to west of node,target_color,replacement_color)
+  Perform Flood_fill(one step to east of node,target_color,replacement_color)
+5-Return.
+  ex.
+	circle(100,100,50);
+	Flood_fill(100,100,RED);
+
+Types of Polygon:
+    -Regular polygon.
+    -Irregular polygon.
+    -Convex polygon.
+    -Concave polygon.
+    -Trigons.
+    -Quadrilateral polygon.
+    -Pentagon polygon.
+    -Hexagon polygon.
+
+Inside-Outside test:
+Inside–outside test, a test used in computer graphics to determine if a point is inside or outside of a polygon.
+If the point is on the outside of the polygon the ray will intersect its edge an even number of times.
+
+4 connected & 8 connected:
+4-connected region: from a given pixel you can get to any other pixel in the region by a series of 4 way moves (up, down,left, right). 
+8-connected region: from a given pixel you can get to any other pixel in the region by a series of 8 way moves (up, down,left, right, up-left, up-right, down-left, down-right).
+				By-Khan Omar
+
+

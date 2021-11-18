@@ -1,0 +1,25 @@
+Practical 3- Bresenhem's line Algo.
+----------------------------------------
+Bresenhem:
+-Used to draw line primiive in bitmap image.
+-Determines the pointd of n dimensional raster.//not necessary to learn.
+
+Procedure:
+1.Input the two line end-points, storing left end-pointd in (Xo,Yo)
+2.Plot(Xo,Yo)
+3.Cal.^x,^y,
+  Get first decision parameter as Po=2^y-2^x
+4.At each Xk, starting k=0,perform:
+  if(Pk<0)
+next point to plot is (Xk+1,Yk) and Pk+1=Pk+2^y
+else
+(Xk+ 1,Yk + 1) and Pk+1 = Pk +2^y-2^x
+5 Repeat step 4 (^x) times. //That implies for loop for(k=0;k < ^x;k++)
+
+Desicion parameter:
+A criteria based on which further calculations are made.
+
+Advantages of Bresenhem over DDA:
+1. DDA uses float numbers and uses operators such as division and multiplication in its calculation
+2. Due to the use of only addition, subtraction and bit shifting Bresenhams algorithm is faster than DDA in producing the line.
+			By-Khan Omar
