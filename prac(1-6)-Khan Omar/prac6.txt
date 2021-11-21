@@ -72,7 +72,7 @@ Drawback:
 For some object the regions is partially filled here 4connected cannot be used.
 
 8connected:
-In this technique 8-connected pixels are used as shown in the figure. We are putting pixels above, below, right and left side of the current pixels,
+In this technique 8-connected pixels, We are putting pixels above, below, right and left side of the current pixels,
 as we were doing in 4-connected technique.
 In addition to this, we are also putting pixels in diagonals so that entire area of the current pixel is covered. 
 This process will continue until we find a boundary with different color.
