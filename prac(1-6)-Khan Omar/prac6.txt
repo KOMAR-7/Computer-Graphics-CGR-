@@ -65,14 +65,14 @@ Boundary Fill
 
 4connected Vs 8connected
 4connected:
-In this technique 4-connected pixels are used as shown in the figure. 
+In this technique 4-connected pixels are used.
 We are putting the pixels above, below, to the right, and to the left side of the current pixels and 
 this process will continue until we find a boundary with different color.
 Drawback:
 For some object the regions is partially filled here 4connected cannot be used.
 
 8connected:
-In this technique 8-connected pixels, We are putting pixels above, below, right and left side of the current pixels,
+In this technique 8-connected pixels are used. We are putting pixels above, below, right and left side of the current pixels,
 as we were doing in 4-connected technique.
 In addition to this, we are also putting pixels in diagonals so that entire area of the current pixel is covered. 
 This process will continue until we find a boundary with different color.
