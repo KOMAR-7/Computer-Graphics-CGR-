@@ -3,7 +3,7 @@ Practical 2: DDA Line
 DDA- digital differential analyzer (DDA).
      Used for rasterization of lines, rectangles and polygon.
 
-Rasteriation:convert vextor image into raster image(in pixels).
+Rasteriation:convert vector image into raster image(in pixels).
 
 Equations:
 Xi=Xi-1 + 1,
